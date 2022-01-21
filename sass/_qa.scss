@@ -1,0 +1,99 @@
+.qa{
+    padding-top: 63px;
+    padding-bottom: 120px;
+    background: url(../img/qa-bg.png) no-repeat center center / cover;
+}
+
+.qa-title{
+    margin-bottom: 63px;
+}
+
+.qa-items{
+    width: 612px;
+    margin-left: auto;
+
+    @include mq('sp'){
+        width: 100%;
+    }
+}
+
+.qa-item{
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 17px 16px;
+
+    &:nth-child(n+2){
+        margin-top: 28px;
+    }
+}
+
+.qa-box-q{
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: "Q";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: $color-accent;
+        color: #fff;
+        border-radius: 99px;
+        text-align: center;
+        line-height: 24px;
+        margin-right: 16px;
+    }
+    
+    &.is-open{
+    
+        .qa-box-q-bar2{
+            transform:  translate(-50% , -50%) rotate(-90deg);
+        }
+
+    }
+}
+
+.qa-box-q-icon{
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    position: relative;
+
+}
+
+.qa-box-q-bar1,
+.qa-box-q-bar2{
+    background: $color-accent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    transition: transform 0.5s ease 0s;
+
+}
+
+.qa-box-q-bar1{
+    width: 16px;
+    height: 2px;
+}
+
+.qa-box-q-bar2{
+    width: 2px;
+    height: 16px;
+}
+
+.qa-box-a{
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 15px;
+    background: #3B69FF33;
+    border-radius: 4px;
+    line-height: calc(24/16);
+    display: none;
+
+}
+

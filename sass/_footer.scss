@@ -1,0 +1,96 @@
+footer{
+    padding: 60px 160px;
+    background: $color-main;
+
+    @include mq('sp'){
+        padding: 60px 77px 57px;
+    }
+}
+
+.footer-wrap{
+    display: flex;
+
+    @include mq('sp'){
+        display: block;
+    }
+}
+
+.footer-left{}
+
+.sns-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.twitter-icon{
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 36px;
+
+}
+
+.facebook-icon{
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 36px;
+    margin-left: 32px;
+
+    @include mq('sp'){
+        margin-left: 50px;
+    }
+}
+
+.footer-link{
+    margin-top: 40px;
+    color: #fff;
+    opacity: 0.6;
+
+    @include mq('sp'){
+        text-align: center;
+    }
+
+    a{
+        display: block;
+        letter-spacing: 0.4px;
+
+        &:nth-child(n+2){
+            margin-top: 24px;
+        }
+    }
+}
+
+.footer-right{
+    margin-left: auto;
+
+    @include mq('sp'){
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+.company-name{
+    font-size: 40px;
+    color: #fff;
+    opacity: 0.6;
+
+    @include mq('sp'){
+        font-size: 32px;
+    }
+}
+
+.copyright{
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: #fff;
+    opacity: 0.6;
+    text-align: right;
+
+    @include mq('sp'){
+        text-align: center;
+    }
+}

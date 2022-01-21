@@ -1,0 +1,114 @@
+$color-main:#3E3E3E;
+$color-accent:#3B69FF;
+$btn-color:#FFAA3B;
+
+$layout-width-inner:1200px;
+
+// ブレークポイント
+$breakpoints:(
+     'sp' : 'screen and (max-width: 767px)',
+     'tab': '(min-width: 768px) and (max-width: #{$layout-width-inner})',
+     'pc': '(min-width: #{$layout-width-inner})',
+);
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints , $breakpoint)} {
+        @content;
+    }
+} 
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+    font-family: 'Montserrat' , '游ゴシック' , 'Yu Gothic UI' , sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    background: #F3F3F3;
+    color: $color-main;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: inherit;
+    list-style: none;
+}
+
+.inner{
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include mq('tab'){
+        padding: 0 24px;
+    }
+
+    @include mq('sp'){
+        padding: 0 16px;
+    }
+}
+
+.head-title{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 800;
+    display: none;
+    transform: all 0.5s ease 0s;
+}
+
+.is-show{
+    display: block
+}
+
+.-active{
+    background: #fff;
+    color: $btn-color;
+}
+
+@import "header";
+@import "main-visual";
+@import "news";
+@import "service";
+@import "result";
+@import "price";
+@import "comment";
+@import "qa";
+@import "access";
+@import "contact";
+@import "footer";

@@ -1,0 +1,254 @@
+.contact{
+    padding: 60px 0;
+    background: url(../img/contact-bg.png) no-repeat center center / cover;
+}
+
+.contact-wrap{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mq('sp'){
+        width: 100%;
+    }
+}
+
+.contact-head{
+    color: #fff;
+    background: url(../img/contact1.png) no-repeat center center / cover;
+    padding: 62px 0;
+    border-radius: 12px 12px 0 0;
+
+    @include mq('sp'){
+        padding: 40px 16px;
+    }
+}
+
+.contact-title{
+    margin-bottom: 20px;
+
+    @include mq('sp'){
+        font-size: 30px;
+    }
+}
+
+.contact-content{
+    text-align: center;
+
+    @include mq('sp'){
+        text-align: left;
+        font-size: 14px;
+    }
+}
+
+.contact__form{
+    background: #fff;
+    padding: 60px 120px;
+    border-radius: 0 0 12px 12px;
+
+    @include mq('sp'){
+        padding: 20px 12px 40px 12px;
+    }
+}
+
+.contact-form{}
+
+.contact-form__dl{}
+
+.contact-form-row{
+    
+    &:nth-child(n+2){
+        margin-top: 26px;
+    }
+
+    &:not(:last-child){
+        display: flex;
+        align-items: center;
+
+        @include mq('sp'){
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+
+
+.is-required{
+    position: relative;
+
+    &::after{
+        content: "必須";
+        width: 40px;
+        height: 16px;
+        border-radius: 2px;
+        color: #fff;
+        background: #ff4646;
+        padding: 2px 0;
+        line-height: 12px;
+        text-align: center;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%);
+    }
+}
+
+.contact-form-label{
+    width: 150px;
+    margin-right: 36px;
+    font-weight: 700;
+    
+    @include mq('sp'){
+        width: 100%;
+    }
+}
+
+.contact-form-input{
+    width: 100%;
+
+    @include mq('sp'){
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    select{
+        margin: 0;
+        padding: 0;
+        width: 178px;
+        height: 40px;
+        border: 1px solid #707070;
+        padding: 12px;
+        background: #fff;
+
+        @include mq('sp'){
+            width: 100%;
+        }
+    }
+
+    [type="text"],
+    [type="email"]{
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-bottom: 1px solid #707070;
+
+        &:hover{
+            border-bottom: 1px solid#4973ff;
+            box-shadow: 0 0 8px rgba(#000 , 0.16);
+        }
+    }
+
+    textarea{
+        width: 720px;
+        margin-top: 8px;
+        min-height: 200px;
+        resize: vertical;
+
+        @include mq('tab'){
+            width: 100%;
+        }
+
+        @include mq('sp'){
+            width: 100%;
+        }
+    }
+}
+
+.contact-radio-input-part{
+    margin-right: 40px;
+}
+
+.contact-form-privacy{
+    margin-top: 40px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-privacy{
+    position: relative;
+    width: 15px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-privacy-input{
+    position: absolute;
+    top: 0;
+    left: -20px;
+    opacity: 0;
+
+    &:checked + .contact-privacy-part{
+        width: 10px;
+        border-top: 0;
+        border-left: 0;
+        background: transparent;
+        transform: rotate(45deg);
+        top: -5px;        
+    }
+
+    &:focus + .contact-privacy-part{
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    &:checked:focus + .contact-privacy-part{
+        outline: none;
+    }
+
+}
+
+.contact-privacy-part{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-accent;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.contact-privacy-message{
+    display: inline-block;
+}
+
+.contact-form-btn{
+    
+    [type="submit"]{
+        display: block;
+        width: 173px;
+        height: 50px;
+        line-height: 50px;
+        background: $btn-color;
+        border: 0;
+        color: #fff;
+        box-shadow: 0 3px 5px rgba(#000 , 0.16);
+        border-radius: 10px;
+        transition: all 0.5s ease 0s;
+        margin-top: 40px;
+        font-size: 18px;
+
+        @include mq('sp'){
+            margin: 0 auto;
+            margin-top: 35px;
+        }
+
+        &:hover{
+            background: #F18900;
+        }
+    }
+}
+
+.contact-message{
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+
+    &.-error{
+        color: #f00;
+    }
+}

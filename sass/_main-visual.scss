@@ -1,0 +1,94 @@
+.main-visual{
+    background: url(../img/mv.png) no-repeat center center / cover;
+    height: 648px;
+    position: relative;
+
+    @include mq('sp'){
+        margin-top: 63px;
+        padding-top: 160px;
+        height: 604px;
+        background: url(../img/mv.png) no-repeat left center / cover;
+    }
+}
+
+.main-visual-contents{
+    width: 650px;
+    padding-left: 50px;
+    position: absolute;
+    top: 228px;
+    right: 40px;
+
+    @include mq('sp'){
+        width: 343px;
+        position: static;
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+        padding-left: 0;
+    }
+}
+
+.main-visual-heading{
+    font-size: 32px;
+    line-height: calc(48/32);
+    font-weight: 700;
+    letter-spacing: -0.1px;
+
+    @include mq('sp'){
+        font-size: 24px;
+    }
+}
+
+.main-visual-message{
+    font-size: 18px;
+    line-height: calc(28/18);
+    margin-top: 28px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    @include mq('sp'){
+        font-size: 14px;
+        margin-top: 25px;
+        letter-spacing: 0;
+    }
+}
+
+.main-visual-contact-btn{
+    margin-top: 37px;
+
+    @include mq('sp'){
+        margin-top: 26px;
+    }
+
+    a{
+        display: block;
+        width: 282px;
+        height: 50px;
+        padding: 16px 50px;
+        background: $btn-color;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 5px rgba(#000 , 0.16);
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        transition: all 0.5s ease 0s;
+
+        @include mq('sp'){
+            width: 222px;
+            height: 48px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0 auto;
+            padding: 16px 30px;
+            letter-spacing: 0;
+        }
+
+        &:hover{
+            background: #F18900;
+        }
+
+
+    }
+
+}
